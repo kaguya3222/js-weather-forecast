@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div class="wrapper silver-bg">
+      <h2 class="main-text roboto-text">Find your city:</h2>
+      <div class="search-block">
+        <form
+          class="search-bar search-bg search-border"
+          method="get"
+          action="#"
+        >
+          <input
+            type="text"
+            class="search-field search-border roboto-text"
+            placeholder="Your city"
+          />
+          <button
+            class="search-button search-border pointer btn-hover roboto-text"
+          >
+            Find
+          </button>
+        </form>
+        <p class="search-error">City wasn't found</p>
+      </div>
+
+      <p class="choose-text roboto-text">Or</p>
+
+      <button
+        id="js-getLocation"
+        class="location-button search-bg temp-radius btn-hover pointer"
+      >
+        Check my location
+      </button>
+
+      <div class="current-weather current-weather-shadow white-bg">
+        <h2 class="city-info roboto-text weather-item"></h2>
+
+        <div class="temp-block weather-item">
+          <img class="temp-icon" alt="Weather" />
+          <p class="temp-info roboto-text"></p>
+        </div>
+
+        <p class="weather-info weather-item"></p>
+        <p class="date-info weather-item"></p>
+
+        <div class="other-inf other-border">
+          <div class="title-block other-block other-border">
+            <p class="title other-text">Wind</p>
+          </div>
+
+          <div class="description-block other-block other-border">
+            <p id="js-wind" class="description other-text"></p>
+          </div>
+
+          <div class="title-block other-block other-border">
+            <p class="title other-text">Cloudiness</p>
+          </div>
+
+          <div class="description-block other-block other-border">
+            <p id="js-clouds" class="description other-text"></p>
+          </div>
+
+          <div class="title-block other-block other-border">
+            <p class="title other-text">Pressure</p>
+          </div>
+
+          <div class="description-block other-block other-border">
+            <p id="js-pressure" class="description other-text"></p>
+          </div>
+
+          <div class="title-block other-block other-border">
+            <p class="title other-text">Humidity</p>
+          </div>
+
+          <div class="description-block other-block other-border">
+            <p id="js-humidity" class="description other-text"></p>
+          </div>
+
+          <div class="title-block other-block other-border">
+            <p class="title other-text">Sunrise</p>
+          </div>
+
+          <div class="description-block other-block pressure-desc other-border">
+            <p id="js-sunrise" class="description other-text"></p>
+          </div>
+
+          <div class="title-block other-block other-border">
+            <p class="title other-text">Sunset</p>
+          </div>
+
+          <div class="description-block other-block other-border">
+            <p id="js-sunset" class="description other-text"></p>
+          </div>
+
+          <div class="title-block other-block other-border">
+            <p class="title other-text">Geo coords</p>
+          </div>
+
+          <div class="description-block other-block other-border">
+            <p id="js-geo" class="description other-text"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-weather-wrapper">
+        <div class="day-weather-block">
+          <header class="day-weather-header weather-header-bg">
+            <p class="date-title white-color roboto-text"></p>
+          </header>
+
+          <div class="three-hour-wrapper white-bg"></div>
+        </div>
+
+        <div class="day-weather-block">
+          <header class="day-weather-header weather-header-bg">
+            <p class="date-title white-color roboto-text"></p>
+          </header>
+
+          <div class="three-hour-wrapper white-bg"></div>
+        </div>
+
+        <div class="day-weather-block">
+          <header class="day-weather-header weather-header-bg">
+            <p class="date-title white-color roboto-text"></p>
+          </header>
+
+          <div class="three-hour-wrapper white-bg"></div>
+        </div>
+
+        <div class="day-weather-block">
+          <header class="day-weather-header weather-header-bg">
+            <p class="date-title white-color roboto-text"></p>
+          </header>
+
+          <div class="three-hour-wrapper white-bg"></div>
+        </div>
+
+        <div class="day-weather-block">
+          <header class="day-weather-header weather-header-bg">
+            <p class="date-title white-color roboto-text"></p>
+          </header>
+
+          <div class="three-hour-wrapper white-bg"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="js/index.js"></script>
+</html>
