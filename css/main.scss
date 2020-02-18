@@ -8,6 +8,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+  color: inherit;
+}
+
 input,
 button:focus {
   outline: none;
@@ -265,4 +269,9 @@ button:focus {
 
 .temp-radius {
   border-radius: 8px;
+}
+
+.github-icon {
+  margin: 10px auto 10px 10px;
+  font-size: 30px;
 }
