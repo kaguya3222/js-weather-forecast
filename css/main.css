@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -14,16 +13,9 @@ button:focus {
 
 .wrapper {
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
 .roboto-text {
@@ -39,34 +31,27 @@ button:focus {
 }
 
 .search-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  flex-flow: column nowrap;
   margin-bottom: 10px;
   max-width: 100%;
+}
+@media (max-width: 599px) {
+  .search-block {
+    padding: 0 10px 0;
+  }
 }
 
 .search-error {
   display: none;
   font-size: 12px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   color: #d63031;
 }
 
 .search-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
   width: 100%;
   max-width: 455px;
   height: 60px;
@@ -90,7 +75,6 @@ button:focus {
 
 .search-button {
   width: 84px;
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
@@ -105,10 +89,7 @@ button:focus {
 
 .current-weather {
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  flex-flow: column nowrap;
   padding: 25px 25px 15px;
   width: 290px;
   min-height: 450px;
@@ -119,28 +100,18 @@ button:focus {
 }
 
 .current-weather-shadow {
-  -webkit-box-shadow: 0 0 2px gray;
-          box-shadow: 0 0 2px gray;
+  box-shadow: 0 0 2px gray;
 }
 
 .city-info {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   margin-bottom: 10px;
 }
 
 .temp-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  align-items: center;
   margin-bottom: 5px;
 }
 
@@ -162,29 +133,17 @@ button:focus {
 }
 
 .other-inf {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 85px auto;
-      grid-template-columns: 85px auto;
-  -ms-grid-rows: 50px (30px)[5] 50px;
-      grid-template-rows: 50px repeat(5, 30px) 50px;
+  grid-template-columns: 85px auto;
+  grid-template-rows: 50px repeat(5, 30px) 50px;
   border: 1px solid;
 }
 
 .other-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
   padding-left: 5px;
 }
 
@@ -198,8 +157,7 @@ button:focus {
 }
 
 .title {
-  -ms-grid-column-align: end;
-      justify-self: end;
+  justify-self: end;
 }
 
 .description-block {
@@ -212,22 +170,20 @@ button:focus {
   max-width: 520px;
   display: none;
 }
+@media (max-width: 599px) {
+  .day-weather-wrapper {
+    padding: 20px;
+  }
+}
 
 .day-weather-block {
   margin-bottom: 10px;
 }
 
 .day-weather-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: column nowrap;
+  justify-content: center;
   padding-left: 7px;
   height: 30px;
 }
@@ -241,25 +197,19 @@ button:focus {
 }
 
 .three-hour-wrapper {
-  display: -ms-grid;
   display: grid;
+  width: 100%;
   grid-auto-rows: auto;
 }
 
 .three-hour-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  align-items: center;
   border-bottom: 1px solid;
   padding-left: 5px;
   height: 55px;
+  width: 100%;
 }
 
 .other-border {
@@ -269,30 +219,19 @@ button:focus {
 .day-temp-icon {
   height: auto;
   width: 45px;
-  margin-right: 145px;
 }
 
 .three-hour-weather {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  flex-flow: column wrap;
+  margin-left: auto;
+  margin-right: 15px;
 }
 
 .three-hour-temp {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  align-items: center;
   width: 150px;
   margin-bottom: 8px;
 }
@@ -306,19 +245,10 @@ button:focus {
 }
 
 .temp-value-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: 45px;
   height: 16px;
   margin-right: 7px;
@@ -332,7 +262,6 @@ button:focus {
   border: none;
   width: 150px;
   margin-bottom: 20px;
-  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 

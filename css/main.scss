@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 * {
   box-sizing: border-box;
@@ -36,6 +37,9 @@ button:focus {
   flex-flow: column nowrap;
   margin-bottom: 10px;
   max-width: 100%;
+  @include for-phone-only {
+    padding:0 10px 0;
+  }
 }
 
 .search-error {
@@ -165,6 +169,9 @@ button:focus {
   width: 100%;
   max-width: 520px;
   display: none;
+  @include for-phone-only {
+    padding: 20px;
+  }
 }
 
 .day-weather-block {
@@ -189,6 +196,7 @@ button:focus {
 
 .three-hour-wrapper {
   display: grid;
+  width: 100%;
   grid-auto-rows: auto;
 }
 
@@ -199,6 +207,7 @@ button:focus {
   border-bottom: 1px solid;
   padding-left: 5px;
   height: 55px;
+  width: 100%;
 }
 
 .other-border {
@@ -208,12 +217,13 @@ button:focus {
 .day-temp-icon {
   height: auto;
   width: 45px;
-  margin-right: 145px;
 }
 
 .three-hour-weather {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
+  margin-left: auto;
+  margin-right: 15px;
 }
 
 .three-hour-temp {
